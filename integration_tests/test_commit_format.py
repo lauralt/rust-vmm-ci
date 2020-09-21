@@ -22,7 +22,7 @@ def test_commit_format():
     and if commits are signed.
     """
     # Fetch the upstream repository.
-    fetch_base_cmd = "git fetch {} {}".format(BASE_REPO, BASE_BRANCH)
+    fetch_base_cmd = "yes | git fetch {} {}".format(BASE_REPO, BASE_BRANCH)
     subprocess.run(fetch_base_cmd, shell=True, check=True)
     # Get hashes of PR's commits in their abbreviated form for
     # a prettier printing.
